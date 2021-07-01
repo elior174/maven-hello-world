@@ -30,6 +30,7 @@ jobs:
     
     - name: Check Files
       run: |
+        cd my-app
         ls -a
         cd target 
         ls -a
