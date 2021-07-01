@@ -21,7 +21,9 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-    - name: Clean with Maven
-      run: mvn clean my-app/pom.xml
+        
     - name: Build with Maven
-      run: mvn -B package --file my-app/pom.xml
+      run: |
+        cd my-app
+        mvn package
+        java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
