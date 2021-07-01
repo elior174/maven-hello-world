@@ -28,9 +28,15 @@ jobs:
         mvn package
         java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
     
-    - name: Check Files
-      run: |
-        cd my-app
-        ls -a
-        cd target 
-        ls -a
+  #  - name: Check Files
+ #   run: |
+ #       cd my-app
+  #      ls -a
+   #     cd target 
+    #    ls -a
+    
+    - name: Upload Artifacts
+      uses: actions/upload-artifacts@v2
+      with: 
+        name: github-actions-artifacts
+        path: my-app/target/my-app-1.0-SNAPSHOT.jar
