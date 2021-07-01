@@ -27,3 +27,9 @@ jobs:
         cd my-app
         mvn package
         java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+    
+    - name: Check Files
+      run: |
+        ls -a
+        cd target 
+        ls -a
