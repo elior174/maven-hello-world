@@ -49,7 +49,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Docker Pull and Run
-      run: docker run edadon/dockerstore:latest
+      run: docker run edadon/dockerstore
     - name: Check Files
       run: |
         cd my-app
