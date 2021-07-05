@@ -50,7 +50,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Docker Pull
-      run: docker pull edadon/dockerstore:master-6efb035
+      run: docker run edadon/dockerstore:master-6efb035
     - name: Check Files
       run: |
         cd my-app
