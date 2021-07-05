@@ -49,4 +49,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
       
-    
+    - name: Docker Pull
+      run: docker pull edadon/dockerstore:master-6efb035
