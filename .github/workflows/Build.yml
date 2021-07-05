@@ -51,3 +51,9 @@ jobs:
       
     - name: Docker Pull
       run: docker pull edadon/dockerstore:master-6efb035
+    - name: Check Files
+      run: |
+        cd my-app
+        ls -a
+        cd target 
+        ls -a
